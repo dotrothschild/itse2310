@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9aG-AM-rlr">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9aG-AM-rlr">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,7 +20,6 @@
         <!--View Controller-->
         <scene sceneID="7WC-mM-zj8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cLI-FT-WOU" sceneMemberID="firstResponder"/>
                 <viewController id="9aG-AM-rlr" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HiL-s4-eyV"/>
@@ -43,6 +42,9 @@
                                         <state key="normal" title="0">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonZeroTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="Gd0-5W-Jhl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faj-AE-VmR">
                                         <rect key="frame" x="300" y="504" width="99" height="99"/>
@@ -54,6 +56,9 @@
                                         <state key="normal" title="=">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTotal:" destination="9aG-AM-rlr" eventType="touchUpInside" id="pn9-a0-T3Y"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-KK-0np">
                                         <rect key="frame" x="0.0" y="404" width="99" height="99"/>
@@ -65,6 +70,9 @@
                                         <state key="normal" title="1">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="NyY-3W-asg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efL-Yx-jDF">
                                         <rect key="frame" x="100" y="404" width="99" height="99"/>
@@ -76,6 +84,9 @@
                                         <state key="normal" title="2">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="0Cs-5f-Cbv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGa-5z-Pku">
                                         <rect key="frame" x="200" y="404" width="99" height="99"/>
@@ -87,6 +98,9 @@
                                         <state key="normal" title="3">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="J2J-up-ilf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cu-c0-fIc">
                                         <rect key="frame" x="300" y="404" width="99" height="99"/>
@@ -98,6 +112,9 @@
                                         <state key="normal" title="+">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonOperand:" destination="9aG-AM-rlr" eventType="touchUpInside" id="euY-gv-j4X"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOE-ln-LO2">
                                         <rect key="frame" x="0.0" y="304" width="99" height="99"/>
@@ -109,6 +126,9 @@
                                         <state key="normal" title="4">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="3Yz-Fq-hUm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMm-Ad-ecn">
                                         <rect key="frame" x="100" y="304" width="99" height="99"/>
@@ -120,6 +140,9 @@
                                         <state key="normal" title="5">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="Zmv-bF-p4r"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVH-k9-6ik">
                                         <rect key="frame" x="200" y="304" width="99" height="99"/>
@@ -131,6 +154,9 @@
                                         <state key="normal" title="6">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="oHf-gG-WZh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CV9-kF-ISi">
                                         <rect key="frame" x="300" y="304" width="99" height="99"/>
@@ -142,6 +168,9 @@
                                         <state key="normal" title="–">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonOperand:" destination="9aG-AM-rlr" eventType="touchUpInside" id="W0O-Xf-nfT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZl-rq-6NQ">
                                         <rect key="frame" x="0.0" y="204" width="99" height="99"/>
@@ -153,6 +182,9 @@
                                         <state key="normal" title="7">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="D5f-t4-Gx7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECS-7l-JdF">
                                         <rect key="frame" x="100" y="204" width="99" height="99"/>
@@ -164,6 +196,9 @@
                                         <state key="normal" title="8">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="wkm-41-tLV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIn-ID-Wdn">
                                         <rect key="frame" x="200" y="204" width="99" height="99"/>
@@ -175,6 +210,9 @@
                                         <state key="normal" title="9">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="qIn-Ig-bA4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhX-W1-RrU">
                                         <rect key="frame" x="100" y="104" width="99" height="99"/>
@@ -186,6 +224,10 @@
                                         <state key="normal" title="±">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonReverse:" destination="9aG-AM-rlr" eventType="touchUpInside" id="Tht-Oe-eHe"/>
+                                            <action selector="buttonTotal:" destination="9aG-AM-rlr" eventType="touchUpInside" id="0GF-2f-KqE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i7-sz-CxR">
                                         <rect key="frame" x="200" y="104" width="99" height="99"/>
@@ -197,6 +239,9 @@
                                         <state key="normal" title="%">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTotal:" destination="9aG-AM-rlr" eventType="touchUpInside" id="bJ9-rB-WDC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPZ-0Y-xDl">
                                         <rect key="frame" x="300" y="104" width="99" height="99"/>
@@ -208,6 +253,9 @@
                                         <state key="normal" title="÷">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonOperand:" destination="9aG-AM-rlr" eventType="touchUpInside" id="jHg-el-S25"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfZ-M9-Lxh">
                                         <rect key="frame" x="200" y="504" width="99" height="99"/>
@@ -219,6 +267,9 @@
                                         <state key="normal" title=".">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonDecimalTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="TQm-8J-RWO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbC-tG-cZm">
                                         <rect key="frame" x="300" y="204" width="99" height="99"/>
@@ -230,6 +281,9 @@
                                         <state key="normal" title="×">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonOperand:" destination="9aG-AM-rlr" eventType="touchUpInside" id="jLC-cC-HwA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GL-oQ-2a7">
                                         <rect key="frame" x="0.0" y="104" width="99" height="99"/>
@@ -241,6 +295,9 @@
                                         <state key="normal" title="AC">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonClearAll:" destination="9aG-AM-rlr" eventType="touchUpInside" id="BFj-kI-n2j"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KK4-pL-jwe">
                                         <rect key="frame" x="20" y="24" width="360" height="72"/>
@@ -368,15 +425,15 @@
                                         <exclude reference="Us3-2O-XcY"/>
                                         <exclude reference="gQR-J9-iX2"/>
                                         <exclude reference="yRI-TG-0UB"/>
+                                        <exclude reference="0Fc-Nc-kli"/>
+                                        <exclude reference="MiZ-WN-xCb"/>
+                                        <exclude reference="QSq-GQ-esR"/>
+                                        <exclude reference="l7K-bn-ynQ"/>
                                         <exclude reference="1dp-cr-V4Z"/>
                                         <exclude reference="T7k-rv-ySP"/>
                                         <exclude reference="bTM-jz-L6G"/>
                                         <exclude reference="hfS-bK-bUC"/>
                                         <exclude reference="jLp-c5-Smw"/>
-                                        <exclude reference="0Fc-Nc-kli"/>
-                                        <exclude reference="MiZ-WN-xCb"/>
-                                        <exclude reference="QSq-GQ-esR"/>
-                                        <exclude reference="l7K-bn-ynQ"/>
                                         <exclude reference="0Xd-Cd-SeW"/>
                                         <exclude reference="2z9-pH-j64"/>
                                         <exclude reference="GXu-nb-iiA"/>
@@ -386,28 +443,28 @@
                                         <exclude reference="N70-vI-LQC"/>
                                         <exclude reference="cMZ-S8-tda"/>
                                         <exclude reference="v3u-we-MVc"/>
-                                        <exclude reference="8Sd-gn-GLn"/>
-                                        <exclude reference="K88-GW-DhJ"/>
-                                        <exclude reference="ZlX-rh-NAP"/>
-                                        <exclude reference="nqD-PA-UHb"/>
-                                        <exclude reference="yOA-4g-1c2"/>
                                         <exclude reference="BmW-0a-eZp"/>
                                         <exclude reference="RSC-Pb-Uve"/>
                                         <exclude reference="SVi-cD-J5L"/>
                                         <exclude reference="dgq-bR-Oi2"/>
                                         <exclude reference="gqP-Uh-I3N"/>
                                         <exclude reference="uMS-jJ-cQ3"/>
-                                        <exclude reference="5UR-89-qIV"/>
-                                        <exclude reference="BVb-KO-J2t"/>
-                                        <exclude reference="L4R-Vc-rQk"/>
-                                        <exclude reference="RO0-Ka-IKg"/>
-                                        <exclude reference="RfO-ha-lsS"/>
+                                        <exclude reference="8Sd-gn-GLn"/>
+                                        <exclude reference="K88-GW-DhJ"/>
+                                        <exclude reference="ZlX-rh-NAP"/>
+                                        <exclude reference="nqD-PA-UHb"/>
+                                        <exclude reference="yOA-4g-1c2"/>
                                         <exclude reference="0bg-Lh-JBp"/>
                                         <exclude reference="I3U-20-58F"/>
                                         <exclude reference="Mbr-Be-fiP"/>
                                         <exclude reference="VFL-jk-Lg7"/>
                                         <exclude reference="m7D-ZZ-DSD"/>
                                         <exclude reference="oWK-CR-8Ix"/>
+                                        <exclude reference="5UR-89-qIV"/>
+                                        <exclude reference="BVb-KO-J2t"/>
+                                        <exclude reference="L4R-Vc-rQk"/>
+                                        <exclude reference="RO0-Ka-IKg"/>
+                                        <exclude reference="RfO-ha-lsS"/>
                                         <exclude reference="Bto-g3-027"/>
                                         <exclude reference="fCQ-SL-vLk"/>
                                         <exclude reference="fqE-Lc-HVz"/>
@@ -428,16 +485,16 @@
                                         <exclude reference="YQi-bk-zBd"/>
                                         <exclude reference="gDu-14-UKv"/>
                                         <exclude reference="qWH-3e-itN"/>
-                                        <exclude reference="BSE-Zg-kHP"/>
-                                        <exclude reference="IaF-pn-Yqu"/>
-                                        <exclude reference="KTX-eC-Nha"/>
-                                        <exclude reference="dZv-Y2-KeS"/>
                                         <exclude reference="3Go-Nh-PfN"/>
                                         <exclude reference="3bF-I5-L12"/>
                                         <exclude reference="Z1D-EP-28f"/>
                                         <exclude reference="dAt-bM-8MV"/>
                                         <exclude reference="dHV-8u-yvh"/>
                                         <exclude reference="qMJ-tU-1cH"/>
+                                        <exclude reference="BSE-Zg-kHP"/>
+                                        <exclude reference="IaF-pn-Yqu"/>
+                                        <exclude reference="KTX-eC-Nha"/>
+                                        <exclude reference="dZv-Y2-KeS"/>
                                         <exclude reference="9C2-T4-kPf"/>
                                         <exclude reference="Brj-JH-Dlq"/>
                                         <exclude reference="Irk-Tp-Sol"/>
@@ -467,15 +524,15 @@
                                         <include reference="Us3-2O-XcY"/>
                                         <include reference="gQR-J9-iX2"/>
                                         <include reference="yRI-TG-0UB"/>
+                                        <include reference="0Fc-Nc-kli"/>
+                                        <include reference="MiZ-WN-xCb"/>
+                                        <include reference="QSq-GQ-esR"/>
+                                        <include reference="l7K-bn-ynQ"/>
                                         <include reference="1dp-cr-V4Z"/>
                                         <include reference="T7k-rv-ySP"/>
                                         <include reference="bTM-jz-L6G"/>
                                         <include reference="hfS-bK-bUC"/>
                                         <include reference="jLp-c5-Smw"/>
-                                        <include reference="0Fc-Nc-kli"/>
-                                        <include reference="MiZ-WN-xCb"/>
-                                        <include reference="QSq-GQ-esR"/>
-                                        <include reference="l7K-bn-ynQ"/>
                                         <include reference="0Xd-Cd-SeW"/>
                                         <include reference="2z9-pH-j64"/>
                                         <include reference="GXu-nb-iiA"/>
@@ -485,28 +542,28 @@
                                         <include reference="N70-vI-LQC"/>
                                         <include reference="cMZ-S8-tda"/>
                                         <include reference="v3u-we-MVc"/>
-                                        <include reference="8Sd-gn-GLn"/>
-                                        <include reference="K88-GW-DhJ"/>
-                                        <include reference="ZlX-rh-NAP"/>
-                                        <include reference="nqD-PA-UHb"/>
-                                        <include reference="yOA-4g-1c2"/>
                                         <include reference="BmW-0a-eZp"/>
                                         <include reference="RSC-Pb-Uve"/>
                                         <include reference="SVi-cD-J5L"/>
                                         <include reference="dgq-bR-Oi2"/>
                                         <include reference="gqP-Uh-I3N"/>
                                         <include reference="uMS-jJ-cQ3"/>
-                                        <include reference="5UR-89-qIV"/>
-                                        <include reference="BVb-KO-J2t"/>
-                                        <include reference="L4R-Vc-rQk"/>
-                                        <include reference="RO0-Ka-IKg"/>
-                                        <include reference="RfO-ha-lsS"/>
+                                        <include reference="8Sd-gn-GLn"/>
+                                        <include reference="K88-GW-DhJ"/>
+                                        <include reference="ZlX-rh-NAP"/>
+                                        <include reference="nqD-PA-UHb"/>
+                                        <include reference="yOA-4g-1c2"/>
                                         <include reference="0bg-Lh-JBp"/>
                                         <include reference="I3U-20-58F"/>
                                         <include reference="Mbr-Be-fiP"/>
                                         <include reference="VFL-jk-Lg7"/>
                                         <include reference="m7D-ZZ-DSD"/>
                                         <include reference="oWK-CR-8Ix"/>
+                                        <include reference="5UR-89-qIV"/>
+                                        <include reference="BVb-KO-J2t"/>
+                                        <include reference="L4R-Vc-rQk"/>
+                                        <include reference="RO0-Ka-IKg"/>
+                                        <include reference="RfO-ha-lsS"/>
                                         <include reference="Bto-g3-027"/>
                                         <include reference="fCQ-SL-vLk"/>
                                         <include reference="fqE-Lc-HVz"/>
@@ -527,16 +584,16 @@
                                         <include reference="YQi-bk-zBd"/>
                                         <include reference="gDu-14-UKv"/>
                                         <include reference="qWH-3e-itN"/>
-                                        <include reference="BSE-Zg-kHP"/>
-                                        <include reference="IaF-pn-Yqu"/>
-                                        <include reference="KTX-eC-Nha"/>
-                                        <include reference="dZv-Y2-KeS"/>
                                         <include reference="3Go-Nh-PfN"/>
                                         <include reference="3bF-I5-L12"/>
                                         <include reference="Z1D-EP-28f"/>
                                         <include reference="dAt-bM-8MV"/>
                                         <include reference="dHV-8u-yvh"/>
                                         <include reference="qMJ-tU-1cH"/>
+                                        <include reference="BSE-Zg-kHP"/>
+                                        <include reference="IaF-pn-Yqu"/>
+                                        <include reference="KTX-eC-Nha"/>
+                                        <include reference="dZv-Y2-KeS"/>
                                         <include reference="9C2-T4-kPf"/>
                                         <include reference="Brj-JH-Dlq"/>
                                         <include reference="Irk-Tp-Sol"/>
@@ -563,7 +620,11 @@
                             <constraint firstAttribute="trailing" secondItem="PJW-Qz-dWw" secondAttribute="trailing" priority="750" constant="7" id="qFm-As-9nF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="display" destination="KK4-pL-jwe" id="lgp-pj-1Et"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLI-FT-WOU" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-130.43478260869566" y="155.70652173913044"/>
         </scene>
