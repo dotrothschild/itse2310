@@ -2,231 +2,207 @@
 //  ViewController.swift
 //  Calculator
 //
-//  Created by student on 9/7/17.
-//  Copyright © 2017 Objective-C Fundamentals. All rights reserved.
-//
+//  Created by Shimon Rothschild on 9/7/17.
+//  Copyright © 2017 Shimon Rothschild. All rights reserved.
+
 
 import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var display: UITextField!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        display.text = "0"
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    @IBOutlet weak var display: UITextField!
+    
     // MARK: - Class variables
     var currentDisplayString = "0"
+    var hasFractionalSeparator = false
+    var isNewOperand = true
+    var operand1: Double?
+    var operand2: Double?
+    var operand3: Double?
+    var operation1: String?
+    var operation2: String?
     
-    var decimalCount = 0
-    var register1: Double?
-    var register2: Double?
-    var operand1: String?
-    var operand2: String?
-    
-    // this is only 1-9, 0 and . are special case
-    @IBAction func buttonNumberTouch(_ sender: UIButton) {
-        if (currentDisplayString == "0" ) {
-            currentDisplayString = sender.titleLabel!.text!
+    @IBAction func buttonClearAll(_ sender: UIButton) {
+        if buttonClearAll.titleLabel?.text == "AC"{
+            initVars()
         } else {
-            if (register1 == nil) {
-                currentDisplayString += sender.titleLabel!.text!
-            } else { // have a second value
-                if (register2 == nil) {
-                    if (decimalCount == 1) { // has decimal point
-                         currentDisplayString += sender.titleLabel!.text!
-                    } else {
-                        currentDisplayString = sender.titleLabel!.text!
-                    }
-                    
-                } else {
-                    currentDisplayString += sender.titleLabel!.text!
-                }
-                register2 = Double(currentDisplayString)
-            }
-        }
-        display.text = currentDisplayString
-    }
-    
-    @IBAction func buttonZeroTouch(_ sender: UIButton) {
-        if (currentDisplayString == "0" ) {
-            currentDisplayString = sender.titleLabel!.text!
-        } else {
-            if ((register2 == nil) && (register1 != nil)) {
-                currentDisplayString = "0"
-                display.text = currentDisplayString
-            } else {
-            if currentDisplayString.characters.count > 0 { // will always be greeater, this test is legacy code to be removed
-            currentDisplayString += sender.titleLabel!.text!
+            currentDisplayString = "0"
             display.text = currentDisplayString
-                }
+            isNewOperand = true;
+            changeButtonClearAllTitle()
         }
-        }
+        
     }
+    @IBOutlet weak var buttonClearAll: UIButton!
     
-    @IBAction func buttonDecimalTouch(_ sender: UIButton) {
-        if decimalCount == 0 {
-            if (display.text == "0") {
-                currentDisplayString = "0."
-            } else
-            {
-            currentDisplayString += sender.titleLabel!.text!
-            }
-            display.text = currentDisplayString;
-            decimalCount = 1
-        } else {
-            AudioServicesPlaySystemSound(1053)
-        }
-    }
-
-    
-    @IBAction func buttonReverse(_ sender: UIButton) {
+    @IBAction func buttonReverse(_ button: UIButton) {
         if (display.text != "0") {
             let firstLetter = display.text?.characters.first
             if (firstLetter != "-") {
                 currentDisplayString = "-" + display.text!
                 
             } else {
-                let index = display.text?.index((display.text?.startIndex)!, offsetBy: 1)
-                currentDisplayString = (display.text?.substring(from: index!))!
+                currentDisplayString = "-"+currentDisplayString
             }
             display.text = currentDisplayString;
-            // if its after an operand then then its a new value
-            if (register1  != nil){
-                register2 = Double(currentDisplayString)
-            }
-
         }
     }
+    @IBAction func buttonPercent(_ button: UIButton) {
+        if (operand1 == nil) {
+            operand1 = Double(currentDisplayString)! / 100
+            currentDisplayString = String.localizedStringWithFormat("%g", operand1!)
+            
+        } else {
+            operand2 = (operand1! * operand1!) / 100 //this is Apple implementation
+            currentDisplayString = String.localizedStringWithFormat("%g", operand2!)        }
+        display.text = currentDisplayString
+    }
+    @IBAction func buttonNumberTouch(_ button: UIButton) {
+        buttonClearAll.titleLabel?.text = " C"
+        if (isNewOperand){ // only for create first number
+            currentDisplayString = button.titleLabel!.text!
+            
+ 
+        } else {
+            currentDisplayString += button.titleLabel!.text!
+            
+        }
+        isNewOperand = false
+        display.text = currentDisplayString
+    } // end buttonNumberTouch
+    @IBAction func buttonFractionalSeparatorTouch(_ button: UIButton) {
+        if isNewOperand {
+            currentDisplayString = "0."
+            display.text = currentDisplayString
+            isNewOperand = false
+            hasFractionalSeparator = true
+        } else {
+            if !hasFractionalSeparator {
+                currentDisplayString += button.titleLabel!.text!
+                display.text = currentDisplayString;
+                hasFractionalSeparator = true
+            } else {
+                AudioServicesPlaySystemSound(1053)
+            }
+        }
+    }
+    @IBAction func buttonOperation(_ button: UIButton) {
+        if (operation1 == nil) {
+            if (button.titleLabel!.text! != "=") { // if = not saving display or operation, no erase, but no operation
+                operand1 = Double(currentDisplayString)
+                operation1 = button.titleLabel!.text!
+            }
+        } else { // Apple this situation operand2 NEVER = 0
+            if (operand2 == nil) {
+                operand2 = Double(currentDisplayString)
+            }
+            switch button.titleLabel!.text! {
+                
+            case "÷", "×":
+                if (operation1 == "×") {
+                    operand1 = operand1! * operand2!
+                    operand2 = nil;
+                    operation1 = button.titleLabel!.text!
+                } else {
+                    if (operation1 == "÷"){
+                        operand1 = operand1! / operand2!
+                        operand2 = nil
+                        operation1 = button.titleLabel!.text!
+                    } else { // order of operations so wait to calculate
+                        operation2 = button.titleLabel!.text!
+                    }
+                }
+            case "–", "+", "=":
+                if (operation2 == nil) {// not an order of operatation complication
+                    switch operation1! {
+                    case "÷":
+                        operand1 = operand1! / operand2!
+                        operand2 = nil
+                        operation1 = button.titleLabel!.text!
+                    case "×":
+                        operand1 = operand1! * operand2!
+                        operand2 = nil
+                        operation1 = button.titleLabel!.text!
+                    case "–":
+                        operand1 = operand1! - operand2!
+                        operand2 = nil
+                        operation1 = button.titleLabel!.text!
+                    case "+":
+                        operand1 = operand1! + operand2!
+                        operand2 = nil
+                        operation1 = button.titleLabel!.text!
+                    default:
+                        break;
+                    }
+                } else {
+                    operand3 = Double(currentDisplayString)
+                    if (operation2 == "×") {
+                        operand2 = operand3! * operand2!
+                    }
+                    if (operation2 == "÷"){
+                        operand2 = operand3! / operand2!
+                    }
+                    if (operation1 ==  "–") {
+                        operand1 = operand1! - operand2!
+                        operation1 = button.titleLabel!.text!
+                    }
+                    if (operation1 ==  "+") {
+                        operand1 = operand1! + operand2!
+                        operation1 = button.titleLabel!.text!
+                    }
+                    // only thing remaining in memory is operand1 an operation1 if operation2 is = then operation1 also nil
+                    operand3 = nil
+                    operand2 = nil
+                    operand2 = nil
+                }
+            default:
+                break;
+            }
+            if (button.titleLabel!.text! == "=") {
+                operation1 = nil
+                operation2 = nil
+                operand2 = nil
+            }
+        }
+        
+        hasFractionalSeparator = false
+        isNewOperand = true
+        buttonClearAll.titleLabel?.text = "AC"
+        // if operand2 not nil its order of operations in progress
+        if (operand2 == nil) {
+            currentDisplayString = String.localizedStringWithFormat("%g", operand1!)
+            display.text = currentDisplayString
+        }
+    }
+    // MARK: - System methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //initVars()
+    }
     
-    @IBAction func buttonClearAll(_ sender: UIButton) {
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    // MARK: - Private methods
+    func initVars() -> Void{
         currentDisplayString = "0"
-        display.text = "0"
-        decimalCount = 0
-        register1 = nil
-        register2 = nil
+        display.text = currentDisplayString
+        hasFractionalSeparator = false
+        isNewOperand = true;
+        //    buttonClearDisplay.titleLabel!.text! = "AC"
         operand1 = nil
         operand2 = nil
+        operand3 = nil
+        operation1 = nil
+        operation2 = nil
     }
-    
-    @IBAction func buttonOperand(_ sender: UIButton) {
-        if (currentDisplayString != "0"){
-            if (operand1 == nil) {
-                operand1 = sender.titleLabel!.text!
-                register1 = Double(currentDisplayString) // might already be set as this, dont care
-            } else {
-                operand2 = sender.titleLabel!.text!
-                register2 = Double(currentDisplayString)            }
-
+    func changeButtonClearAllTitle() -> Void {
+        if buttonClearAll.titleLabel?.text == "AC"{
+           buttonClearAll.titleLabel?.text = " C"
+        } else {
+            buttonClearAll.titleLabel?.text = "AC"
         }
     }
-    
-    @IBAction func buttonTotal(_ sender: UIButton) {
-        var total: Double
-        if (register2 == nil) { //it's a singleton value
-            if (sender.titleLabel!.text! == "%") {
-                if (operand1 != nil) {
-                // according to the Apple calculator it is ALWAYS (register1) squared / 100, don't care about operands
-                    total = (register1! * register1!) / 100
-                } else {
-                    total = Double(currentDisplayString)! / 100
-                }
-                register1 = total // this does not clear the registry WARNING, behavior may be strange defects.
-                operand1 = nil
-                currentDisplayString = removeTrailingZero(total: total)
-                display.text = currentDisplayString
-            }
-            else {//if (sender.titleLabel!.text! == "=") {
-                if let thisOperand = operand1 {
-
-                    switch thisOperand {
-                    case "+": total = (register1! * 2)
-                    currentDisplayString = removeTrailingZero(total: total)
-                    case "–": total = 0
-                    currentDisplayString = removeTrailingZero(total: total)
-                        case "×": total = (register1! * register1!)
-                        currentDisplayString = removeTrailingZero(total: total)
-                        
-                        default: // divide
-                        if (register1 == 0) {
-                            currentDisplayString = "Not a number"
-                            register1 = nil
-                        } else {
-                            total = 1
-                            currentDisplayString = "1"
-                        }
-                        
-                    }
-                    operand1 = nil
-                    display.text = currentDisplayString
-
-                } // else operand1 ia nil and NOOP
-            }
-
-        } else { // its binary
-            if let thisOperand = operand1 {
-                
-                switch thisOperand {
-               // case "+": total = (register1! * 2)
-               // currentDisplayString = removeTrailingZero(total: total)
-               // case "–": total = 0
-              //  currentDisplayString = removeTrailingZero(total: total)
-                    
-                case "×": total = (register1! * register2!)
-                    currentDisplayString = removeTrailingZero(total: total)
-                register1 = total;
-                    register2 = nil
-                    operand1 = nil
-                    decimalCount = 0
-                    operand1 = nil
-                default: // divide
-                    if (register2 == 0) {
-                        currentDisplayString = "Not a number"
-                        register1 = nil
-                    } else {
-                        total = register1! / register2!
-                        currentDisplayString = removeTrailingZero(total: total)
-                        register1 = total
-                        register2 = nil
-                        decimalCount = 0
-                        operand1 = nil
-                        
-                    }
-                    
-                }
-                
-                operand1 = nil
-                
-                display.text = currentDisplayString
-                
-                
-            }
- 
-        }
-        
-        
-        decimalCount = 0
-    }
-    func removeTrailingZero(total: Double) -> String{
-        let tempVar = String(format: "%g", total)
-        return tempVar
-    }}
+} // end of class

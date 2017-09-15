@@ -43,7 +43,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonZeroTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="Gd0-5W-Jhl"/>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="H8j-rU-VMR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faj-AE-VmR">
@@ -53,11 +53,12 @@
                                             <constraint firstAttribute="height" constant="99" id="1Jt-3c-fnN"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="65"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="17"/>
                                         <state key="normal" title="=">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonTotal:" destination="9aG-AM-rlr" eventType="touchUpInside" id="pn9-a0-T3Y"/>
+                                            <action selector="buttonOperation:" destination="9aG-AM-rlr" eventType="touchUpInside" id="VVj-bB-NDl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-KK-0np">
@@ -71,7 +72,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="NyY-3W-asg"/>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="cbv-a6-NEY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efL-Yx-jDF">
@@ -85,7 +86,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="0Cs-5f-Cbv"/>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="TBQ-zY-Ihm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGa-5z-Pku">
@@ -99,7 +100,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="J2J-up-ilf"/>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="2aj-bh-gH1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cu-c0-fIc">
@@ -109,11 +110,12 @@
                                             <constraint firstAttribute="height" constant="99" id="Oac-Al-MZG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="65"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="17"/>
                                         <state key="normal" title="+">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonOperand:" destination="9aG-AM-rlr" eventType="touchUpInside" id="euY-gv-j4X"/>
+                                            <action selector="buttonOperation:" destination="9aG-AM-rlr" eventType="touchUpInside" id="Y2d-eT-qKt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOE-ln-LO2">
@@ -127,7 +129,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="3Yz-Fq-hUm"/>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="cd0-sr-Bz7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMm-Ad-ecn">
@@ -141,7 +143,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="Zmv-bF-p4r"/>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="Pwn-T5-e2g"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVH-k9-6ik">
@@ -155,7 +157,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="oHf-gG-WZh"/>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="vcb-fw-qfv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CV9-kF-ISi">
@@ -165,11 +167,12 @@
                                             <constraint firstAttribute="height" constant="99" id="kZ3-Iz-ADv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="65"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="17"/>
                                         <state key="normal" title="–">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonOperand:" destination="9aG-AM-rlr" eventType="touchUpInside" id="W0O-Xf-nfT"/>
+                                            <action selector="buttonOperation:" destination="9aG-AM-rlr" eventType="touchUpInside" id="tiJ-fm-SDV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZl-rq-6NQ">
@@ -183,7 +186,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="D5f-t4-Gx7"/>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="3tr-Al-drq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECS-7l-JdF">
@@ -197,7 +200,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="wkm-41-tLV"/>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="XBP-HE-2Q6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIn-ID-Wdn">
@@ -211,7 +214,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="qIn-Ig-bA4"/>
+                                            <action selector="buttonNumberTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="5TS-CD-R1Q"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhX-W1-RrU">
@@ -221,12 +224,12 @@
                                             <constraint firstAttribute="height" constant="99" id="dWi-rf-2T0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="65"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="18"/>
                                         <state key="normal" title="±">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonReverse:" destination="9aG-AM-rlr" eventType="touchUpInside" id="Tht-Oe-eHe"/>
-                                            <action selector="buttonTotal:" destination="9aG-AM-rlr" eventType="touchUpInside" id="0GF-2f-KqE"/>
+                                            <action selector="buttonReverse:" destination="9aG-AM-rlr" eventType="touchUpInside" id="bb4-jq-CBU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i7-sz-CxR">
@@ -240,7 +243,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonTotal:" destination="9aG-AM-rlr" eventType="touchUpInside" id="bJ9-rB-WDC"/>
+                                            <action selector="buttonPercent:" destination="9aG-AM-rlr" eventType="touchUpInside" id="yIO-po-Krb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPZ-0Y-xDl">
@@ -250,11 +253,12 @@
                                             <constraint firstAttribute="height" constant="99" id="gTc-RA-l17"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="65"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="17"/>
                                         <state key="normal" title="÷">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonOperand:" destination="9aG-AM-rlr" eventType="touchUpInside" id="jHg-el-S25"/>
+                                            <action selector="buttonOperation:" destination="9aG-AM-rlr" eventType="touchUpInside" id="mSv-Gl-pNO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfZ-M9-Lxh">
@@ -264,11 +268,12 @@
                                             <constraint firstAttribute="height" constant="99" id="tQV-RN-90w"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="17"/>
                                         <state key="normal" title=".">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonDecimalTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="TQm-8J-RWO"/>
+                                            <action selector="buttonFractionalSeparatorTouch:" destination="9aG-AM-rlr" eventType="touchUpInside" id="Ncf-SR-mJf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbC-tG-cZm">
@@ -278,11 +283,12 @@
                                             <constraint firstAttribute="height" constant="99" id="0Gf-H1-Fze"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="73"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="17"/>
                                         <state key="normal" title="×">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonOperand:" destination="9aG-AM-rlr" eventType="touchUpInside" id="jLC-cC-HwA"/>
+                                            <action selector="buttonOperation:" destination="9aG-AM-rlr" eventType="touchUpInside" id="hnP-SP-k7O"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GL-oQ-2a7">
@@ -296,7 +302,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonClearAll:" destination="9aG-AM-rlr" eventType="touchUpInside" id="BFj-kI-n2j"/>
+                                            <action selector="buttonClearAll:" destination="9aG-AM-rlr" eventType="touchUpInside" id="Qia-dm-br3"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KK4-pL-jwe">
@@ -621,7 +627,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="display" destination="KK4-pL-jwe" id="lgp-pj-1Et"/>
+                        <outlet property="buttonClearAll" destination="9GL-oQ-2a7" id="1rh-sh-0oR"/>
+                        <outlet property="display" destination="KK4-pL-jwe" id="ZKH-aU-fE3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLI-FT-WOU" sceneMemberID="firstResponder"/>
