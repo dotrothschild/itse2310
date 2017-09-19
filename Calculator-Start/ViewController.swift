@@ -28,6 +28,9 @@ class ViewController: UIViewController {
             initVars()
         } else {
             currentDisplayString = "0"
+            if (operation1 == nil) { // this is a HACK to fix unary %
+                operand1 = nil
+            }
             display.text = currentDisplayString
             isNewOperand = true;
             changeButtonClearAllTitle()
@@ -168,7 +171,7 @@ class ViewController: UIViewController {
         
         hasFractionalSeparator = false
         isNewOperand = true
-        buttonClearAll.titleLabel?.text = "AC"
+        //buttonClearAll.titleLabel?.text = "AC"
         // if operand2 not nil its order of operations in progress
         if (operand2 == nil) {
             currentDisplayString = String.localizedStringWithFormat("%g", operand1!)
