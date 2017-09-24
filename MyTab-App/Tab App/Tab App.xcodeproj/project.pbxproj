@@ -7,19 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E3E81111F783F9E003604A4 /* CatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3E81101F783F9E003604A4 /* CatsViewController.swift */; };
+		2E3E81131F784127003604A4 /* BirdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3E81121F784127003604A4 /* BirdsViewController.swift */; };
+		2E3E81151F78413B003604A4 /* RabbitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3E81141F78413B003604A4 /* RabbitsViewController.swift */; };
+		2EB619E81F77F73900958235 /* birds.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2EB619E31F77F73900958235 /* birds.mp4 */; };
+		2EB619E91F77F73900958235 /* cats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2EB619E41F77F73900958235 /* cats.mp4 */; };
+		2EB619EA1F77F73900958235 /* dogs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2EB619E51F77F73900958235 /* dogs.mp4 */; };
+		2EB619EB1F77F73900958235 /* people.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2EB619E61F77F73900958235 /* people.mp4 */; };
+		2EB619EC1F77F73900958235 /* rabbits.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2EB619E71F77F73900958235 /* rabbits.mp4 */; };
+		2EB619F31F77F74900958235 /* bird.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2EB619EE1F77F74900958235 /* bird.pdf */; };
+		2EB619F41F77F74900958235 /* cat.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2EB619EF1F77F74900958235 /* cat.pdf */; };
+		2EB619F51F77F74900958235 /* dog.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2EB619F01F77F74900958235 /* dog.pdf */; };
+		2EB619F61F77F74900958235 /* humans.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2EB619F11F77F74900958235 /* humans.pdf */; };
+		2EB619F71F77F74900958235 /* rabbit.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2EB619F21F77F74900958235 /* rabbit.pdf */; };
 		2ED9BF891F77DB5F002BED6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED9BF881F77DB5F002BED6F /* AppDelegate.swift */; };
-		2ED9BF8B1F77DB5F002BED6F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED9BF8A1F77DB5F002BED6F /* FirstViewController.swift */; };
-		2ED9BF8D1F77DB5F002BED6F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED9BF8C1F77DB5F002BED6F /* SecondViewController.swift */; };
+		2ED9BF8B1F77DB5F002BED6F /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED9BF8A1F77DB5F002BED6F /* PeopleViewController.swift */; };
+		2ED9BF8D1F77DB5F002BED6F /* DogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED9BF8C1F77DB5F002BED6F /* DogsViewController.swift */; };
 		2ED9BF901F77DB60002BED6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED9BF8E1F77DB60002BED6F /* Main.storyboard */; };
 		2ED9BF921F77DB60002BED6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ED9BF911F77DB60002BED6F /* Assets.xcassets */; };
 		2ED9BF951F77DB60002BED6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED9BF931F77DB60002BED6F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E3E81101F783F9E003604A4 /* CatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatsViewController.swift; sourceTree = "<group>"; };
+		2E3E81121F784127003604A4 /* BirdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdsViewController.swift; sourceTree = "<group>"; };
+		2E3E81141F78413B003604A4 /* RabbitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RabbitsViewController.swift; sourceTree = "<group>"; };
+		2EB619E31F77F73900958235 /* birds.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = birds.mp4; sourceTree = "<group>"; };
+		2EB619E41F77F73900958235 /* cats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cats.mp4; sourceTree = "<group>"; };
+		2EB619E51F77F73900958235 /* dogs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dogs.mp4; sourceTree = "<group>"; };
+		2EB619E61F77F73900958235 /* people.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = people.mp4; sourceTree = "<group>"; };
+		2EB619E71F77F73900958235 /* rabbits.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rabbits.mp4; sourceTree = "<group>"; };
+		2EB619EE1F77F74900958235 /* bird.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = bird.pdf; sourceTree = "<group>"; };
+		2EB619EF1F77F74900958235 /* cat.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = cat.pdf; sourceTree = "<group>"; };
+		2EB619F01F77F74900958235 /* dog.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dog.pdf; sourceTree = "<group>"; };
+		2EB619F11F77F74900958235 /* humans.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = humans.pdf; sourceTree = "<group>"; };
+		2EB619F21F77F74900958235 /* rabbit.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = rabbit.pdf; sourceTree = "<group>"; };
 		2ED9BF851F77DB5F002BED6F /* Tab App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tab App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED9BF881F77DB5F002BED6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2ED9BF8A1F77DB5F002BED6F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		2ED9BF8C1F77DB5F002BED6F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2ED9BF8A1F77DB5F002BED6F /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		2ED9BF8C1F77DB5F002BED6F /* DogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsViewController.swift; sourceTree = "<group>"; };
 		2ED9BF8F1F77DB60002BED6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ED9BF911F77DB60002BED6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ED9BF941F77DB60002BED6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +63,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EB619E21F77F73900958235 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				2EB619E31F77F73900958235 /* birds.mp4 */,
+				2EB619E41F77F73900958235 /* cats.mp4 */,
+				2EB619E51F77F73900958235 /* dogs.mp4 */,
+				2EB619E61F77F73900958235 /* people.mp4 */,
+				2EB619E71F77F73900958235 /* rabbits.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		2EB619ED1F77F74900958235 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				2EB619EE1F77F74900958235 /* bird.pdf */,
+				2EB619EF1F77F74900958235 /* cat.pdf */,
+				2EB619F01F77F74900958235 /* dog.pdf */,
+				2EB619F11F77F74900958235 /* humans.pdf */,
+				2EB619F21F77F74900958235 /* rabbit.pdf */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		2ED9BF7C1F77DB5F002BED6F = {
 			isa = PBXGroup;
 			children = (
@@ -57,10 +107,15 @@
 			isa = PBXGroup;
 			children = (
 				2ED9BF881F77DB5F002BED6F /* AppDelegate.swift */,
-				2ED9BF8A1F77DB5F002BED6F /* FirstViewController.swift */,
-				2ED9BF8C1F77DB5F002BED6F /* SecondViewController.swift */,
+				2ED9BF8A1F77DB5F002BED6F /* PeopleViewController.swift */,
+				2ED9BF8C1F77DB5F002BED6F /* DogsViewController.swift */,
+				2E3E81101F783F9E003604A4 /* CatsViewController.swift */,
+				2E3E81121F784127003604A4 /* BirdsViewController.swift */,
+				2E3E81141F78413B003604A4 /* RabbitsViewController.swift */,
 				2ED9BF8E1F77DB60002BED6F /* Main.storyboard */,
 				2ED9BF911F77DB60002BED6F /* Assets.xcassets */,
+				2EB619ED1F77F74900958235 /* Icons */,
+				2EB619E21F77F73900958235 /* Videos */,
 				2ED9BF931F77DB60002BED6F /* LaunchScreen.storyboard */,
 				2ED9BF961F77DB60002BED6F /* Info.plist */,
 			);
@@ -127,9 +182,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB619F51F77F74900958235 /* dog.pdf in Resources */,
+				2EB619E81F77F73900958235 /* birds.mp4 in Resources */,
+				2EB619F41F77F74900958235 /* cat.pdf in Resources */,
+				2EB619EC1F77F73900958235 /* rabbits.mp4 in Resources */,
 				2ED9BF951F77DB60002BED6F /* LaunchScreen.storyboard in Resources */,
+				2EB619EB1F77F73900958235 /* people.mp4 in Resources */,
+				2EB619F61F77F74900958235 /* humans.pdf in Resources */,
 				2ED9BF921F77DB60002BED6F /* Assets.xcassets in Resources */,
+				2EB619E91F77F73900958235 /* cats.mp4 in Resources */,
+				2EB619F71F77F74900958235 /* rabbit.pdf in Resources */,
+				2EB619EA1F77F73900958235 /* dogs.mp4 in Resources */,
 				2ED9BF901F77DB60002BED6F /* Main.storyboard in Resources */,
+				2EB619F31F77F74900958235 /* bird.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,9 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ED9BF8D1F77DB5F002BED6F /* SecondViewController.swift in Sources */,
+				2E3E81151F78413B003604A4 /* RabbitsViewController.swift in Sources */,
+				2E3E81131F784127003604A4 /* BirdsViewController.swift in Sources */,
+				2ED9BF8D1F77DB5F002BED6F /* DogsViewController.swift in Sources */,
 				2ED9BF891F77DB5F002BED6F /* AppDelegate.swift in Sources */,
-				2ED9BF8B1F77DB5F002BED6F /* FirstViewController.swift in Sources */,
+				2E3E81111F783F9E003604A4 /* CatsViewController.swift in Sources */,
+				2ED9BF8B1F77DB5F002BED6F /* PeopleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +374,7 @@
 				2ED9BF9B1F77DB60002BED6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
